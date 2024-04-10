@@ -379,33 +379,68 @@ ul li a:hover {
   }
 }
 
-@media (max-width: 375px){
+@media (max-width: 671px){
   
     #pic img {
       width: 20%;
-      top: 15%;
+      top: 215%;
       left: 50%;
       transform: translate(-50%, -50%);
-      margin-top: 0;
+      margin-top: 8%;
   }
 
   #intro {
     left: 50%; 
-    top: 270%; 
+    top: 245%; 
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 12px;
-    margin-top: 10;
-  }
-
-    #skills span {
-      text-align: left;
-      
-  }
-     #skills  {
-      top: 245%; 
-      text-align: left;
+    margin-top: 20%;
   }
 }
 
+@media (max-width: 425px){
+  #about{
+    display: flex;
+    min-height: 45vh;
+    max-width: var(--max-width);
+    padding: 1rem;
+  }
+    #pic img {
+      width: 25%;
+      position: absolute;
+      top: 225%; 
+      left: 50%;
+      margin-top: 10px;
+      transform: translate(-50%, -50%);  
+  }
+#intro {
+  left: 50%; 
+  top: 275%; 
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20%;
+}
+}
+
+@media (max-width: 335){
+ 
+    #pic img {
+      width: 25%;
+      position: absolute;
+      top: 235%; 
+      left: 50%;
+      margin-top: 10%;
+      transform: translate(-50%, -50%);  
+  }
+#intro {
+  left: 50%; 
+  top: 279%; 
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20%;
+}
+}
 
