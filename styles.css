@@ -252,10 +252,10 @@ ul li a:hover {
 #intro{
   position: absolute; 
   top: 160%; 
-  left: 63%; 
+  left: 65%; 
   transform: translate(-50%, -50%); 
   display: flex;
-  font-size: 1rem;
+  font-size: 14px;
   color: var(--text-light);
   flex-direction: column;
   text-align: justify;
@@ -292,6 +292,38 @@ ul li a:hover {
   padding: 0rem 1.5rem;
 }
 
+
+@media (max-width: 992px){
+      #about{
+        display: flex;
+        min-height: 45vh;
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 1rem;
+      }
+        #pic img {
+          width: 25%;
+          top: 158%;
+          left: 32%;
+          transform: translate(-50%, -50%);
+          margin-top: 0;
+      }
+    #intro {
+      left: 64%; 
+      top: 170%; 
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+    }
+
+    #skills span {
+      text-align: left;
+   }
+  
+     #skills  {
+      text-align: left;
+    }
+}
+
 @media (max-width: 768px){
   #about{
     display: flex;
@@ -301,29 +333,77 @@ ul li a:hover {
     padding: 1rem;
   }
     #pic img {
+      width: 25%;
+      position: absolute;
+      top: 221%; 
+      left: 30%;
+      margin-top: 10px;
+      transform: translate(-50%, -50%);  
+  }
+
+  #intro {
+      top: 255%;
+      left: 65%; 
+      margin-top: 10px;
+  }
+
+    #skills span {
+      text-align: left;
+      
+  }
+  
+     #skills  {
+      top: 245%; 
+      text-align: left;
+  }
+}
+
+@media (max-width: 671px){
+  
+  #pic img {
+    width: 25%;
+    position: absolute;
+    top: 210%; 
+    left: 50%;
+    margin-top: 30px;
+    transform: translate(-50%, -50%);  
+}
+  #intro {
+    left: 51%; 
+    top: 260%;
+    margin-top: 30px; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 375px){
+  
+    #pic img {
       width: 20%;
-      top: 200%;
+      top: 15%;
       left: 50%;
       transform: translate(-50%, -50%);
       margin-top: 0;
   }
 
-    #intro {
-      left: 50%; 
-      top: 255%; 
-      transform: translate(-50%, -50%);
-      text-align: center;
-      padding-right: 10px;
-      font-size: 14px;
-    }
+  #intro {
+    left: 50%; 
+    top: 270%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10;
+  }
 
     #skills span {
-      margin-top: 0;
       text-align: left;
+      
   }
-  
      #skills  {
-      margin-top: 0;
+      top: 245%; 
       text-align: left;
   }
 }
