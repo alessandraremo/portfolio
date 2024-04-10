@@ -28,7 +28,6 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li> <!-- Modified this line -->
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -48,7 +47,7 @@
             web projects, ranging from personal blogs to e-commerce platforms.
           </p>
           <div class="action__btns">
-            <button class="my__portfolio">My Portfolio</button>
+            <button class="my__portfolio">Contact Me</button>
             <button class="download__cv">Download CV</button>
           </div>
         </div>
@@ -59,6 +58,7 @@
     </section>
 
   
+        <!--
     <section id="about">
         <div id="pic">
           <h1 class="headings">Get To Know More</h1>
@@ -83,7 +83,7 @@
         </div>
 
       </div>
-    </section>
+    </section>-->
 
 
         <!-- ***** projects ***** -->
@@ -201,6 +201,37 @@
         </div>
       </div>
     </section>
+
+     <!-- ***** About ***** -->
+
+     <section id="about" id="about">
+      <div id="row">
+        <h1 class="headings">Get To Know More</h1>
+        <h1 class="headings2">About Me</h1>
+        <div class="about__content">
+          <div class="about__text">
+            <!-- Replace the below paragraph with info about yourself -->
+            Hello! I am Alessandra, a passionate computer engineering student based in the Philippines, with a keen interest in web development. I'm dedicated to crafting visually appealing, responsive, and user-friendly websites. I've worked on a variety of system and web projects during my academic journey.
+                <br><br>
+                I am actively seeking for an internship opportunity where I can further enhance my skills, contribute to meaningful projects, and cultivate a solid foundation for my future career in software engineering.
+                <br><br>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
 
     
   </body>
