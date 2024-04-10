@@ -223,6 +223,10 @@ ul li a:hover {
 
 #about{
   display: flex;
+  min-height: 35vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
 }
 
 #pic{
@@ -237,8 +241,7 @@ ul li a:hover {
   width: min(20rem, 90%);
   border-radius: 5%;
   position: absolute;
-   
-  top: 140%; 
+  top: 152%; 
   left: 30%;
   margin-top: 40px;
   transform: translate(-50%, -50%);  
@@ -248,7 +251,7 @@ ul li a:hover {
 
 #intro{
   position: absolute; 
-  top: 130%; 
+  top: 160%; 
   left: 63%; 
   transform: translate(-50%, -50%); 
   display: flex;
@@ -259,11 +262,8 @@ ul li a:hover {
   padding: 8px;
 }
 
-#intro h2{
-  font-size: 1rem;
-  margin-bottom: 20px;
-  margin-top: 140px; 
-  color: var(--text-dark);
+#skills span{
+  font-weight: bold;
 }
 
 .headings{
@@ -293,9 +293,16 @@ ul li a:hover {
 }
 
 @media (max-width: 768px){
+  #about{
+    display: flex;
+    min-height: 45vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+  }
     #pic img {
-      width: 50%;
-      top: 175%;
+      width: 20%;
+      top: 200%;
       left: 50%;
       transform: translate(-50%, -50%);
       margin-top: 0;
@@ -303,13 +310,21 @@ ul li a:hover {
 
     #intro {
       left: 50%; 
-      top: 215%; 
+      top: 255%; 
       transform: translate(-50%, -50%);
-      text-align: justified;
-  }
+      text-align: center;
+      padding-right: 10px;
+      font-size: 14px;
+    }
 
-    #intro h2 {
+    #skills span {
       margin-top: 0;
+      text-align: left;
+  }
+  
+     #skills  {
+      margin-top: 0;
+      text-align: left;
   }
 }
 
