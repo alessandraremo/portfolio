@@ -25,6 +25,7 @@
     --font-small:200px;
     --font-medium:16px;
     --font-large:800px
+    
 }
 
 body {
@@ -106,7 +107,119 @@ body {
     color: var(--secondary-color);
     border-width: 4px;
   }
-  
+    
+        /* ----- Buttons and Links ----- */
+
+    a {
+        color: var(--white);
+        font-weight: 400;
+        font-family: 'Jost', sans-serif;
+        transition: all .2s;
+        outline: 2px solid transparent;
+    }
+    
+    ::-moz-focus-inner {
+        border: 0;
+    }
+    
+    button:focus,
+    a:focus {
+        outline: 2px solid var(--primary-color-dark);
+    }
+    
+    body:not(.user-is-tabbing) button:focus,
+    body:not(.user-is-tabbing) a:focus {
+        outline: none;
+    }
+    
+    .link:hover {
+        color: var(--primary-color-dark);
+    }
+    
+    .btn {
+        position: relative;
+        display: inline-block;
+        padding: 1rem 4.2rem;
+        text-decoration: none;
+        color: inherit;
+        border: 1px solid  var(--primary-color-dark);
+        font-weight: 400;
+    }
+    
+    .btn:focus {
+        outline: none;
+    }
+    
+    .btn::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        background: var(--white);
+        height: 100%;
+        z-index: -1;
+        transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+    }
+    
+    .btn:hover::after,
+    .btn:focus::after {
+        right: 0;
+        background: var(--primary-color-dark);
+    }
+    
+    .btn--pink {
+        background: var(--primary-color-dark);
+        transition: all 0.2s;
+    }
+    
+    .btn--pink::after {
+        display: none;
+    }
+    
+    .btn--pink:hover,
+    .btn--pink:focus {
+        background: transparent;
+    }
+    
+    .link__text {
+        position: relative;
+        display: inline-block;
+        padding: .6rem;
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid var(--primary-color-dark);
+    }
+    
+    .link__text::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        background: var(--white);
+        height: 100%;
+        z-index: -1;
+        transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+    }
+    
+    .link__text:focus {
+        outline: none;
+    }
+    
+    .link__text:hover::after,
+    .link__text:focus:after {
+        right: 0;
+        background: var(--primary-color-dark);
+    }
+    
+    .link__text span {
+        padding-left: 1rem;
+        font-family: sans-serif;
+    }
+
 
   /* ----- Home ----- */
 
@@ -238,7 +351,7 @@ body {
       } 
 
       .description {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.2rem;
     }
       .image {
@@ -257,30 +370,43 @@ body {
 /* ----- About ----- */
 /* --------------------------------------- */
 
+#about{
+    padding-top: 100px;
+}
 .about__content {
     display: grid;
     grid-template-columns: 1fr  1fr;
-    padding: 16px;
-    column-gap: 10px;
+    padding-left: 260px; 
+    padding-right: 150px; 
+    padding-top: 30px;
+    column-gap: 60px;
 
-    min-height: 100vh;
+    min-height: 10vh;
     max-width: var(--max-width);
     margin: auto;
   }
   
-  .about__text{
-    position: absolute; 
-    top: 155%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    display: flex;
-    font-size: 16px;
+  .about__text1{
+    line-height: 1.5rem;
     color: var(--text-light);
-    flex-direction: column;
-    text-align: center;
-    padding: 0px;
+    margin-bottom: 2rem;
   }
-  
+
+  .about__text2{
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+
+  .about__text2 span{
+    font-weight: bold;
+  }
+
+  .about__text2 span1{
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
   .headings{
     display: flex;
     justify-content: center;
@@ -307,6 +433,199 @@ body {
     padding: 0rem 1.5rem;
   }
   
+  @media (max-width: 800px) {
+    .about__content {
+        grid-template-columns: 1fr;
+        padding-left: 50px; 
+        padding-right: 50px; 
+        font-size: 14px;
+      }
+    .about__text1{
+        text-align: center;
+      }
+}
+
+    /* --------------------------------------- */
+    /* ----- Projects ----- */
+    /* --------------------------------------- */
+    
+    #projects{
+        padding: 10px;
+        min-height: 10vh;
+        max-width: var(--max-width);
+        margin: auto;
+    }
+    
+    .headings222{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        color: var(--text-light);
+        padding: 0rem 1.5rem;
+        margin-top: 100px;
+        line-height: 1.5rem;
+    }
+    
+    .headings22{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 3rem;
+        color: var(--text-dark);
+        margin-bottom: 40px;
+        padding: 0rem 1.5rem;
+    }
+      
+      .grid {
+        display: grid;
+        grid-template-columns: 600px 600px;
+        column-gap: 20px;
+        row-gap: 70px;
+        justify-content: center; /* Center the grid horizontally */
+
+      }
+      
+      .profile {
+        width: 600px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        vertical-align: top;
+      }
+      
+      .profile-picture {
+        width: 600px;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 12px;
+        cursor: pointer;
+      }
+
+      .profile-picture:hover{
+        opacity: 0.9;
+        cursor: pointer;
+
+      }
+      
+      .name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 15px;
+        margin-bottom: 5px;
+        font-size: 2rem;
+        line-height: 40px;
+    }
+      
+      .mutual-friends-row {
+        display: grid;
+        align-items: center;
+        margin-left: 8px;
+        margin-bottom: 10px;
+        vertical-align: top;
+      }
+      
+      .mutual-friend-picture {
+        height: 36px;
+        width: 36px;
+        object-fit: cover;
+        border-radius: 14px;
+        vertical-align: middle;
+        margin-left: 14px;
+      }
+      
+      .mutual-friends {
+        color: rgb(100, 100, 100);
+        margin-left: 20px;
+      }
+
+      .mutual-friends span {
+        font-style: italic;
+        
+      }
+      
+      .add-friend-button {
+        background-color:var(--primary-color-dark);
+        color: white;
+        border: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-left: 18px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+      }
+
+      .add-friend-button:hover {
+        opacity: 0.9;
+      }
+
+
+      @media (max-width: 1234px) {
+        .grid {
+            grid-template-columns: 500px;
+          }
+          .profile {
+            width: 500px;
+          }
+          
+          .profile-picture {
+            width: 500px;
+            margin-bottom: 12px;
+          }
+      }
+
+      @media (max-width: 630px) {
+        .grid {
+            grid-template-columns: 300px;
+          }
+          .profile-picture {
+            width: 300px;
+            height: 150px;
+            margin-bottom: 12px;
+          }
+          .profile {
+            width: 300px;
+          }
+          .name {
+            font-size: 20px;
+            line-height: 20px;
+        }
+          
+          .mutual-friend-picture {
+            height: 34px;
+            width: 34px;
+          }
+          
+          .mutual-friends {
+            font-size: 17px;
+          }
+    
+          .mutual-friends span {
+            font-size: 17px; 
+          }
+          
+          .add-friend-button {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-left: 6px;
+            padding-right: 6px;
+            border-radius: 6px;
+            font-size: 12px;
+          }
+          
+      }
+
+      
+   
+
     
     
 
