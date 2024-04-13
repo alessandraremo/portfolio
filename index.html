@@ -29,10 +29,11 @@
                 </label>
                     <input type="checkbox" name="check" id="check" />
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li> 
+                  <li><a href="#home" >Home</a></li>
+                  <li><a href="#about">About</a></li> 
                     <li><a href="#projects">Projects</a></li>
                 </ul>
+
         </div>
         </nav>
         
@@ -43,8 +44,30 @@
             <div class="content">
             <p class="subtitle">Hello,</p>
             <h1 class="title">
-                I'm <span>Alessandra Remo<br /></span>a Web Developer
+                I'm <span>Alessandra Remo<br /></span>
             </h1>
+
+              <div class="container">
+                <span class="text first-text">a</span>
+                <span class="text sec-text"> Web Developer</span>
+            </div>
+            <script>
+                const text = document.querySelector(".sec-text");
+                const textLoad = () => {
+                    setTimeout(() => {
+                        text.textContent = "Freelancer";
+                    }, 0);
+                    setTimeout(() => {
+                        text.textContent = "Developer";
+                    }, 4000);
+                    setTimeout(() => {
+                        text.textContent = "Fast Learner";
+                    }, 8000); //1s = 1000 milliseconds
+                }
+                textLoad();
+                setInterval(textLoad, 12000);
+            </script>   
+
             <p class="description">
                 Welcome to my portfolio! I'm Alessandra, a
                 creative web developer with a passion for creating beautiful,
@@ -52,14 +75,16 @@
                 web projects, ranging from personal blogs to e-commerce platforms.
             </p>
             <div class="action__btns">
-                <button class="my__portfolio">Contact Me</button>
-                <button class="download__cv">Download CV</button>
+              <a href="#about" class="my__portfolio"> Get in touch</a>
+              <button class="download__cv">Download CV</button>
             </div>
             </div>
+            
             <div class="image">
             <img src="IMAGES/profile.jpg" alt="profile" />
             </div>
         </div>
+        
         </section>
 
         <!-- ***** about ***** -->
@@ -109,9 +134,12 @@
               <div class="mutual-friends-row">
                 <p class="mutual-friends">
                     Responsive Personal Portfolio Website
-                    <span><br> HTML <br>CSS <br>JavaScript</span>
                 </p>
               </div>
+              <button class="html-btn">HTML</button>
+              <button class="css-btn">CSS</button>
+              <button class="js-btn">JavaScript</button>
+              <br><br>
               <button class="add-friend-button">
                     <a href="https://alessrems.github.io/portfolio/" target="_blank" class="link__text">
                     Visit Site
@@ -130,9 +158,11 @@
                 <div class="mutual-friends-row">
                   <p class="mutual-friends">
                     Incorporated product inventory with database, billing with receipt, <br>and user authentication and action controls.
-                    <span><br>C#<br>MySql <br> <br></span>
                   </p>
                 </div>
+                <button class="c-btn">C#</button>
+                <button class="sql-btn">MySql</button>
+                <br><br>
                 <button class="add-friend-button">
                     <a href="https://github.com/alessrems/pet-management-system" class="link__text">
                     View Source Code
@@ -152,9 +182,11 @@
                   <p class="mutual-friends">
                     Made for Progect Management with PL Application <br>
                     Student registration with automated creation of receipts
-                    <span><br>C#<br>MySql</span>
                   </p>
                 </div>
+                <button class="c-btn">C#</button>
+                <button class="sql-btn">MySql</button>
+                <br><br>
                 <button class="add-friend-button">
                     <a href="https://github.com/alessrems/transaction-management-system.git" class="link__text">
                     View Source Code
@@ -174,9 +206,11 @@
                   <p class="mutual-friends">
                     User-Friendly Website Project made from Wix<br>
                     Incorporates logbook input, application form, and admin module.
-                    <span><br>HTML<br>Wix</span>
                   </p>
                 </div>
+                <button class="html-btn">HTML</button>
+                <button class="wix-btn">Wix</button>
+                <br><br>
                 <button class="add-friend-button">
                     <a href="https://colegiolibrary.wixsite.com/my-site-2" class="link__text">
                     Visit Site
@@ -186,7 +220,38 @@
                   <img src="/IMAGES/github-logo.png" class="mutual-friend-picture" alt="GitHub">
                 </a>
             </div>
+          </section>
 
+    <!-- ***** Footer ***** -->
+
+    <footer role="contentinfo" class="footer">
+      <div class="row">
+        <ul class="footer__social-links">
+          <li class="footer__social-link-item">
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" title="Link to Email Address">
+              <img src="IMAGES/gmail_888853.png" class="footer__social-image" alt="Gmail">
+            </a>
+          </li>
+          <li class="footer__social-link-item">
+            <a href="https://github.com/alessrems" title="Link to Github Profile">
+              <img src="IMAGES/github-logo.png" class="footer__social-image" alt="Github">
+            </a>
+          </li>
+          <li class="footer__social-link-item">
+            <a href="https://www.linkedin.com/in/alessandra-remo-1174a527a/">
+              <img src="IMAGES/linkedin_2504923.png" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+            </a>
+          </li>
+        </ul>
+
+        <p class="footnote">
+          &copy; 2024 - Designed & developed by <a href="https://github.com/alessrems" class="link">Alessandra Remo</a>.
+        </p>
+        <div class="footer__github-buttons">
+          
+        </div>
+      </div>
+    </footer>
 
      </body>
 </html>
