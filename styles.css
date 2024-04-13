@@ -34,8 +34,24 @@ body {
     color: var(--text-dark);
     line-height: var(--line-height-normal);
     overflow-x: hidden;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
+    overflow-y: auto; /* Enable vertical scrolling */
+
   }
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background: var(--extra-light);
+}
+
+::-webkit-scrollbar-thumb{
+  background:var(--primary-color);
+  border-radius: 10px;
+}
+
   
   nav {
     width: 100%;
@@ -58,6 +74,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
   }
   
   nav .nav__content img {
@@ -189,7 +206,6 @@ body {
         padding: .6rem;
         color: inherit;
         text-decoration: none;
-        border-bottom: 1px solid var(--primary-color-dark);
     }
     
     .link__text::after {
@@ -209,11 +225,6 @@ body {
         outline: none;
     }
     
-    .link__text:hover::after,
-    .link__text:focus:after {
-        right: 0;
-        background: var(--primary-color-dark);
-    }
     
     .link__text span {
         padding-left: 1rem;
@@ -257,13 +268,54 @@ body {
     font-weight: 400;
     line-height: 3rem;
     color: var(--text-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5px;
   }
   
   .title span {
     font-weight: 600;
   }
   
+    .container{
+      width: 246px;
+      overflow: hidden;
+      margin-left: -3px;
+      margin-bottom: 17px;
+
+  }
+
+  .container .text{
+      position: relative;
+      color: var(--primary-color-dark);
+      font-size: 30px;
+      font-weight: 600;
+      margin-left: 2px;
+  }
+
+  .container .text.first-text{
+      color: black;
+  }
+
+  .text.sec-text:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--extra-light);
+      border-left: 2px solid var(--primary-color-dark);
+      animation: animate 4s steps(12) infinite;
+  }
+
+  @keyframes animate{
+      40%, 60%{
+          left: calc(100% + 4px);
+      }
+      100%{
+          left: 0%;
+      }
+  }
+      
   .description {
     line-height: 1.5rem;
     color: var(--text-light);
@@ -288,8 +340,17 @@ body {
   }
   
   .my__portfolio {
-    background-color: var(--primary-color);
-    color: #ffffff;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    
   }
   
   .my__portfolio:hover {
@@ -323,13 +384,14 @@ body {
     ul {
         position: absolute;
         width: 100%;
-        height: calc(100vh - 85px);
+        height: calc(50vh - 85px);
         left: -100%;
         top: 85px;
         background-color: var(--extra-light);
+        opacity: 0.9;
         flex-direction: column;
         justify-content: center;
-        gap: 3rem;
+        gap: 1.5rem;
       }
     
       nav #check:checked ~ ul {
@@ -339,30 +401,62 @@ body {
       ul li a {
         font-size: 1.25rem;
       }
-    
+
       .section__container {
         padding: 6rem 1rem 5rem 1rem;
         text-align: center;
         grid-template-columns: repeat(1, 1fr);
+        gap: 2px;
       }
 
       .content {
         margin-top: 1px;
       } 
 
+      .container{
+        width: 246px;
+        overflow: hidden;
+        margin-left: 40px;
+  
+      }
+  
+      .container .text{
+          position: relative;
+          color: var(--primary-color-dark);
+          font-size: 30px;
+          font-weight: 600;
+          margin-left: 6px;
+          margin-right: 6px;
+      }
+
       .description {
         font-size: 14px;
         line-height: 1.2rem;
-    }
+      }
+
       .image {
-        width: min(20rem, 40%);
+        width: min(10rem, 60%);
         grid-area: 1/1/2/2;
         margin: auto;
-        margin-bottom: 1px;
+        margin-left: center;
+        margin-top: 1px;
+        margin-bottom: 0px;
       }
 
       .action__btns {
         margin: auto;
+      }
+
+      .subtitle{
+        margin-top: 2px;
+        font-size: 0.9rem;
+
+      }
+
+      .title{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5px;
       }
     }
 
@@ -546,24 +640,89 @@ body {
         font-style: italic;
         
       }
-      
-      .add-friend-button {
-        background-color:var(--primary-color-dark);
+
+      .html-btn {
+          background-color: #e34c26;          ;
+          color: white;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 40px;
+          font-size: 12px;
+          margin-left: 18px;
+          margin-bottom: 10px;
+      }
+
+      .wix-btn{
+        background-color: black;        
         color: white;
         border: none;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 4px;
+        padding: 5px 10px;
+        border-radius: 40px;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+
+      .css-btn {
+        background-color: #264de4;        
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 40px;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+
+      .js-btn {
+        background-color: #f0db4f;        
+        color: #323330;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 40px;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+
+      .c-btn {
+        background-color: #a200ff;        
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 40px;
+        font-size: 12px;
+        margin-left: 18px;
+        margin-bottom: 10px;
+      }
+
+      .sql-btn {
+        background-color: #264de4;        
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 40px;
+        font-size: 12px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+
+      
+      .add-friend-button {
+        font-weight: 600;
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
         font-size: 16px;
         margin-left: 18px;
         margin-bottom: 10px;
-        cursor: pointer;
-
       }
 
-      .add-friend-button:hover {
+      .add-friend-button:hover,
+      .add-friend-button:focus:after {
+        background-color: var(--primary-color-dark);
+        color: #ffffff;
         opacity: 0.9;
       }
 
@@ -605,7 +764,7 @@ body {
           }
           
           .mutual-friends {
-            font-size: 17px;
+            font-size: 13px;
           }
     
           .mutual-friends span {
@@ -613,15 +772,100 @@ body {
           }
           
           .add-friend-button {
-            padding-top: 2px;
-            padding-bottom: 2px;
-            padding-left: 6px;
-            padding-right: 6px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 3px;
+            padding-right: 3px;
             border-radius: 6px;
             font-size: 12px;
           }
           
+          ::-webkit-scrollbar{
+            display: none;
+          } 
+
+          .html-btn {
+            font-size: 10px;
+            margin-left: 18px;
+            margin-bottom: 10px;
+        }
+  
+        .css-btn {
+          font-size: 10px;
+          margin-left: 10px;
+          margin-bottom: 10px;
+        }
+  
+        .js-btn {
+          font-size: 10px;
+          margin-left: 10px;
+          margin-bottom: 10px;
+        }
+  
+        .c-btn {
+          font-size: 10px;
+          margin-left: 18px;
+          margin-bottom: 10px;
+        }
+  
+        .sql-btn {
+          font-size: 10px;
+          margin-left: 10px;
+          margin-bottom: 10px;
+        }
+
+        .wix-btn{
+          font-size: 10px;
+          margin-left: 10px;
+          margin-bottom: 10px;
+        }
+  
       }
+
+    /* --------------------------------------- */
+    /* ----- Footer ----- */
+    /* --------------------------------------- */
+
+    .footer {
+      text-align: center;
+      padding: var(--gutter-medium) 0 var(--gutter-normal);
+    }
+
+    .footer__social-links {
+      display: flex;
+      justify-content: center;
+      padding: var(--gutter-normal) 0;
+      list-style: none;
+      margin-top: 200px;
+    }
+
+    .footer__social-link-item:not(:last-of-type) {
+      margin-right: var(--gutter-small);
+    }
+
+    .footer__social-image {
+      height: 4rem;
+    }
+
+    .footer__github-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer__github-buttons iframe {
+      height: 2.5rem;
+      width: 84px;
+      transform: translateY(3px);
+    }
+
+    @media(max-width: 500px) {
+      .footer {
+        margin-top: 100px;
+          padding: 10px;
+          font-size: 14px;
+      } 
+
+    }
 
       
    
