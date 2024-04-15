@@ -32,6 +32,8 @@
                   <li><a href="#home" >Home</a></li>
                   <li><a href="#about">About</a></li> 
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contacts</a></li>
+
                 </ul>
 
         </div>
@@ -69,13 +71,22 @@
             </script>   
 
             <p class="description">
-                Welcome to my portfolio! I'm Alessandra, a
-                creative web developer with a passion for creating beautiful,
-                responsive, and user-friendly websites. I've worked on a variety of
-                web projects, ranging from personal blogs to e-commerce platforms.
-            </p>
+              Welcome to my portfolio! I'm Alessandra, a Computer Engineering student who loves building user-friendly websites. 
+              I enjoy bringing digital ideas to life with a mix of creativity and technical skills </p>
+            <div class="social__btns">
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" title="Link to Email Address">
+                <img src="IMAGES/gmail_888853.png" class="link_btn" alt="Gmail">
+              </a>
+              <a href="https://github.com/alessrems" title="Link to Github Profile">
+                <img src="IMAGES/github-logo.png" class="link_btn" alt="Github">
+              </a>
+              <a href="https://www.linkedin.com/in/alessandra-remo-1174a527a/">
+                <img src="IMAGES/linkedin_2504923.png" title="Link to Linkedin Profile" class="link_btn" alt="Linkedin">
+              </a>
+
+            </div>
             <div class="action__btns">
-              <a href="#about" class="my__portfolio"> Get in touch</a>
+              <a href="#contact" class="my__portfolio"> Get in touch</a>
               <button class="download__cv">Download CV</button>
             </div>
             </div>
@@ -99,7 +110,7 @@
                             <p>
                                 Hello! I am Alessandra, a passionate computer engineering student based in the Philippines, with a keen interest in web development. I love creating visually appealing, responsive, and user-friendly websites. I've worked on a variety of system and web projects during my academic journey.
                                     <br><br>
-                                I am actively seeking an internship opportunity where I can further  enhance my web design and development skills, contribute to meaningful projects,collaborate with industry professionals, and build a solid foundation for my future career in web development.
+                                I am actively seeking an internship opportunity where I can further enhance my web design and development skills, contribute to meaningful projects,collaborate with industry professionals, and build a solid foundation for my future career in web development.
                         </div>
 
                         <div class="about__text2">
@@ -141,11 +152,11 @@
               <button class="js-btn">JavaScript</button>
               <br><br>
               <button class="add-friend-button">
-                    <a href="https://alessrems.github.io/portfolio/" target="_blank" class="link__text">
+                    <a href="https://alessandraremo.github.io/portfolio/" target="_blank" class="link__text">
                     Visit Site
                     </a>
               </button>
-              <a href="https://github.com/alessrems/portfolio" title="View Source Code" target="_blank">
+              <a href="https://alessandraremo.github.io/portfolio/" title="View Source Code" target="_blank">
                     <img src="/IMAGES/github-logo.png" class="mutual-friend-picture" alt="GitHub">
               </a>
             </div>
@@ -180,7 +191,7 @@
                 </p>
                 <div class="mutual-friends-row">
                   <p class="mutual-friends">
-                    Made for Progect Management with PL Application <br>
+                    Made for Project Management with PL Application <br>
                     Student registration with automated creation of receipts
                   </p>
                 </div>
@@ -222,6 +233,28 @@
             </div>
           </section>
 
+    <!-- ***** Contact ***** -->
+
+          <section class="contact" id="contact">
+            <div class="row">
+              <h1 class="headingsg">Get in touch</h1>
+              <h1 class="headingsgg">Contact Me</h1>
+              <div class="contact__info">
+                  <p class="contact_infos">
+                          <br><br>
+                      <span>E-mail:</span> <br> <a href="mailto:remoalessandra@gmail.com" class="link">remoalessandra@gmail.com</a>
+
+                      <br><br>
+                      <span>Mobile #:</span><br> 09488054996
+                      <br><br>
+                      <span>Github:</span> <br> <a href="https://github.com/alessandraremo" class="link"> https://github.com/alessandraremo</a>
+                      <br><br>
+                      <span>Linkedin:</span> <br><a href="linkedin.com/in/alessandra-remo" class="link"> linkedin.com/in/alessandra-remo</a>
+
+                  </p>
+            </div>
+          </section>
+
     <!-- ***** Footer ***** -->
 
     <footer role="contentinfo" class="footer">
@@ -233,7 +266,7 @@
             </a>
           </li>
           <li class="footer__social-link-item">
-            <a href="https://github.com/alessrems" title="Link to Github Profile">
+            <a href="https://github.com/alessandraremo" title="Link to Github Profile">
               <img src="IMAGES/github-logo.png" class="footer__social-image" alt="Github">
             </a>
           </li>
@@ -245,7 +278,7 @@
         </ul>
 
         <p class="footnote">
-          &copy; 2024 - Designed & developed by <a href="https://github.com/alessrems" class="link">Alessandra Remo</a>.
+          &copy; 2024 - Designed & developed by <a href="https://github.com/alessandraremo" class="link">Alessandra Remo</a>.
         </p>
         <div class="footer__github-buttons">
           
@@ -253,5 +286,15 @@
       </div>
     </footer>
 
-     </body>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+    </body>
 </html>
