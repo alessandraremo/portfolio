@@ -339,6 +339,17 @@ body {
     cursor: pointer;
   }
   
+  .social__btns{
+    display: flex;
+    gap: 1rem;
+
+  }
+
+  .link_btn{
+    height: 40px;
+    margin-bottom: 32px;
+  }
+
   .my__portfolio {
     color: var(--primary-color);
     font-size: 1rem;
@@ -443,8 +454,34 @@ body {
         margin-bottom: 0px;
       }
 
+      .social__btns{
+        display: flex;
+        justify-content: center; 
+        gap: 0.5rem;
+        margin-left: 180px;
+        margin-right: 180px;
+      }
+    
+      .link_btn{
+        height: 30px;
+        margin-bottom: 22px;
+        margin-left: 10px;
+      }
+
       .action__btns {
         margin: auto;
+      }
+
+      .action__btns button {
+        font-size: 1rem;
+        font-weight: 00;
+        letter-spacing: 1px;
+        padding: 1rem 1rem;
+        outline: none;
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
       }
 
       .subtitle{
@@ -537,7 +574,16 @@ body {
     .about__text1{
         text-align: center;
       }
-}
+      .footnote{
+        margin-top: 2rem;
+      }
+  }
+  
+  @media (max-width: 769px) {
+    .footnote{
+      margin-top: 5rem;
+    }   
+  }
 
     /* --------------------------------------- */
     /* ----- Projects ----- */
@@ -710,7 +756,9 @@ body {
       
       .add-friend-button {
         font-weight: 600;
-        border: 2px solid var(--primary-color);
+        background-color: var(--primary-color-dark);
+        color: white;
+        border: none;
         border-radius: 10px;
         transition: 0.3s;
         cursor: pointer;
@@ -721,8 +769,6 @@ body {
 
       .add-friend-button:hover,
       .add-friend-button:focus:after {
-        background-color: var(--primary-color-dark);
-        color: #ffffff;
         opacity: 0.9;
       }
 
@@ -823,6 +869,63 @@ body {
       }
 
     /* --------------------------------------- */
+    /* ----- Contacts ----- */
+    /* --------------------------------------- */
+
+    #contact{
+      padding: 10px;
+      min-height: 10vh;
+      max-width: var(--max-width);
+      margin: auto;
+      padding-top: 60px;
+  }
+    .headingsg{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      color: var(--text-light);
+      padding-top: 10px;
+      margin-top: 60px;
+      line-height: 1.5rem;
+    }
+    
+    .headingsgg{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 3rem;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      padding: 0rem 1.5rem;
+    }
+
+    .contact__info{
+      line-height: 1.5rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .contact__info span{
+      font-weight: bold;
+    }
+  
+    .contact__info span1{
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+
+
+    /* --------------------------------------- */
     /* ----- Footer ----- */
     /* --------------------------------------- */
 
@@ -858,13 +961,17 @@ body {
       transform: translateY(3px);
     }
 
+    .footnote{
+      color: black;
+    }
+
     @media(max-width: 500px) {
       .footer {
-        margin-top: 100px;
-          padding: 10px;
           font-size: 14px;
       } 
-
+      .footnote{
+        font-size: 12px;
+      }
     }
 
       
